@@ -27,8 +27,8 @@ export default function NavBar() {
                     </Typography>
                     <div>
                         <Link to="/" >Home</Link> {' | '}
-                        <Link to="Shoes" >Shoes</Link> {' | '}
-                        <Link to="about" >About</Link>
+                        <Link to="/Shoes" >Shoes</Link> {' | '}
+                        <Link to="/about" >About</Link>
                     </div>
                 </Toolbar>
             </AppBar>
