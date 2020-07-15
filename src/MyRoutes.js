@@ -7,6 +7,7 @@ import About from './Components/About';
 import ShoeDetail from './Components/ShoeDetail';
 import NotFound from './Components/NotFound';
 import WomenShoes from './Components/WomenShoes';
+import WomenShoeDetail from './Components/WomenShoeDetail';
 
 function MyRouteConfig() {
     return(
@@ -18,6 +19,7 @@ function MyRouteConfig() {
                 <Route exact path="/shoes" element={<Shoes />}></Route>
                 <Route path="/shoes/:id" element={<ShoeDetail />}></Route>
                 <Route path="/womenshoe" element={<WomenShoes />}></Route>
+                <Route path="/womenshoe/:id" element={<WomenShoeDetail />}></Route>
                 <Route path="*" element={<NotFound />}></Route>
             </Routes>
         </div>
