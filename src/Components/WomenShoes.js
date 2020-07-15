@@ -1,5 +1,5 @@
 import React from 'react';
-import Shoe from './../Shoe.json';
+import WomenShoe from './../WomenShoe.json';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -44,11 +44,11 @@ function WomenShoes() {
 
         <div className={classes.root}>
             <Grid container spacing={3}>
-                {Object.entries(Shoe).map(([shoekey, { name, img }]) => {
+                {Object.entries(WomenShoe).map(([shoekey, { name, img }]) => {
                     return (
 
                         <Grid item xs={6} sm={4}>
-                            <Link key={shoekey} to={`/shoes/${shoekey}`}>
+                            <Link key={shoekey} to={`/womenshoe/${shoekey}`}>
                                 <Paper className={classes.paper}>
 
                                     <Grid container spacing={2}>
