@@ -13,14 +13,16 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         marginTop: 20,
         padding: 'auto',
+        
     },
 
     paper: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(3),
         textAlign: 'center',
         color: theme.palette.text.secondary,
         margin: 'auto',
         maxWidth: 1000,
+        backgroundColor: "#fff748",
     },
     image: {
         width: 200,
@@ -39,7 +41,7 @@ function Shoes() {
     return (
 
         <div className={classes.root}>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
                 {Object.entries(Shoe).map(([shoekey, { name, img }]) => {
                     return (
 

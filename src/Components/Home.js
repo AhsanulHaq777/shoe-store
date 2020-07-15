@@ -1,8 +1,9 @@
 import React from 'react';
+import './../Shoe.css';
 
 function Home() {
     return(
-        <div>
+        <div className="Home">
             <h2>Welcome to Shoe Store</h2>
         </div>
     );
