@@ -23,10 +23,12 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto',
         maxWidth: 1000,
         backgroundColor: "#fff748",
+        
     },
     image: {
         width: 200,
         height: 200,
+        boxShadow: '10px 10px 10px #3c1a5b',
     },
     img: {
         margin: 'auto',

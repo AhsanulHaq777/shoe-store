@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: 600,
     height: 600,
+    boxShadow: '10px 10px 10px #3c1a5b',
   },
   img: {
     margin: 'auto',
