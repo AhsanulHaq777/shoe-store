@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,10 +25,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 1000,
         backgroundColor: "#fff748",
         
+        
     },
     image: {
-        width: 200,
-        height: 200,
+        // width: 200,
+        // height: 200,
         boxShadow: '10px 10px 10px #3c1a5b',
     },
     img: {
@@ -36,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         maxHeight: '100%',
     },
+    btn: {
+        color: "#fff748",
+        backgroundColor: "#3c1a5b",
+        
+    }
 }));
 
 function Shoes() {
@@ -47,37 +54,43 @@ function Shoes() {
                 {Object.entries(Shoe).map(([shoekey, { name, img }]) => {
                     return (
 
-                        <Grid item xs={6} sm={4}>
-                            <Link key={shoekey} to={`/shoes/${shoekey}`}>
+                        <Grid item xs={12} sm={6} lg={4} spacing={2}>
+                            
                                 <Paper className={classes.paper}>
 
                                     <Grid container spacing={2}>
-                                        <Grid item>
-                                            <ButtonBase className={classes.image}>
-                                                <img className={classes.img} src={img} alt={name} />
-                                            </ButtonBase>
+                                       
+                                        <Grid item xs={6} sm={6}>
+                                                <Link key={shoekey} to={`/shoes/${shoekey}`}>
+                                                    <ButtonBase className={classes.image}>
+                                                        <img className={classes.img} src={img} alt={name} />
+                                                    </ButtonBase>
+                                                </Link>
                                         </Grid>
-                                        <Grid item xs={12} sm container>
+                                        
+                                        <Grid item xs={6} sm={6} container>
                                             <Grid item xs container direction="column" spacing={2}>
                                                 <Grid item xs>
                                                     <Typography gutterBottom variant="subtitle1">
                                                         {name}
                                                     </Typography>
                                                 </Grid>
-                                                <Grid item>
-                                                    <Typography variant="subtitle1" style={{ cursor: 'pointer' }}>
-                                                        Add to Cart
-                                                            </Typography>
+                                                <Grid item xs>
+                                                <Typography variant="subtitle1">$19.00</Typography>
+                                                      
+                                                    
                                                 </Grid>
                                             </Grid>
-                                            <Grid item>
-                                                <Typography variant="subtitle1">$19.00</Typography>
+                                            <Grid item xs>
+                                            <Link key={shoekey} to={`/shoes/${shoekey}`}>
+                                                     <Button className={classes.btn} variant="contained">Cart</Button> 
+                                                     </Link>
                                             </Grid>
                                         </Grid>
                                     </Grid>
 
                                 </Paper>
-                            </Link>
+                            
                         </Grid>
 
                     )

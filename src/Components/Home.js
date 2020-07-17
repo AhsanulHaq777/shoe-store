@@ -37,8 +37,13 @@ export default function Home() {
         <div className="App">
             <div className={classes.root}>
                 <Grid container spacing={3}>
-                    <Grid item xs={4} container spacing={3}>
-                        <Grid item xs={12}>
+                <Grid item xs={12} sm={8}>
+                        <Paper className={classes.paper}>
+                            <img className={classes.img} alt="slider-shoes" src="https://assets.materialup.com/uploads/c6b7a1c9-d39c-44b6-9819-3e04a3e9bbf2/preview.gif"/>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} sm={4} container spacing={3}>
+                        <Grid item xs={6} sm={12}>
                             <Link to="/shoes">
                                 <Paper className={classes.paper}>
                                     <img className={classes.img} alt="men-shoes" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/11/12/best-mens-running-shoes-2020-indybest.jpg" />
@@ -46,7 +51,7 @@ export default function Home() {
                                 </Paper>
                             </Link>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={6} sm={12}>
                             <Link to="/womenshoe">
                                 <Paper className={classes.paper}>
                                 <img className={classes.img} alt="women-shoes" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/02/17/16/best-womens-trainers-indybest.jpg?w968h681" />
@@ -55,11 +60,7 @@ export default function Home() {
                             </Link>
                         </Grid>
                     </Grid>
-                    <Grid item xs={8}>
-                        <Paper className={classes.paper}>
-                            <img className={classes.img} alt="slider-shoes" src="https://assets.materialup.com/uploads/c6b7a1c9-d39c-44b6-9819-3e04a3e9bbf2/preview.gif"/>
-                        </Paper>
-                    </Grid>
+                    
                 </Grid>
             </div>
         </div>
