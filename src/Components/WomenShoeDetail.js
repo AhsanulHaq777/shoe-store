@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff748",
   },
   image: {
-    width: 600,
-    height: 600,
+    // width: 600,
+    // height: 600,
     boxShadow: '10px 10px 10px #3c1a5b',
   },
   img: {
